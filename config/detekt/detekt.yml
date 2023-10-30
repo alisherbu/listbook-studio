@@ -1,0 +1,160 @@
+comments:
+  CommentOverPrivateProperty:
+    active: true
+  UndocumentedPublicClass:
+    active: true
+    excludes: [ '**/*.kt' ]
+    includes: [ '**/detekt-api/src/main/**/api/*.kt' ]
+  UndocumentedPublicFunction:
+    active: true
+    excludes: [ '**/*.kt' ]
+    includes: [ '**/detekt-api/src/main/**/api/*.kt' ]
+
+complexity:
+  CyclomaticComplexMethod:
+    active: true
+    ignoreSingleWhenExpression: true
+  LargeClass:
+    active: true
+    excludes: [ '**/test/**', '**/*.Test.kt', '**/*.Spec.kt' ]
+  MethodOverloading:
+    active: true
+  TooManyFunctions:
+    excludes: [ '**/test/**', '**/functionalTest/**' ]
+  LongParameterList:
+    active: true
+    functionThreshold: 6
+    constructorThreshold: 10
+    ignoreDefaultParameters: false
+    ignoreDataClasses: true
+    ignoreAnnotatedParameter: [ ]
+    ignoreAnnotated: [ 'Composable' ]
+
+coroutines:
+  active: true
+  GlobalCoroutineUsage:
+    active: true
+  RedundantSuspendModifier:
+    active: true
+  SleepInsteadOfDelay:
+    active: true
+  SuspendFunWithFlowReturnType:
+    active: true
+
+exceptions:
+  InstanceOfCheckForException:
+    active: true
+  NotImplementedDeclaration:
+    active: true
+  ObjectExtendsThrowable:
+    active: true
+  RethrowCaughtException:
+    active: true
+  ReturnFromFinally:
+    active: true
+  ThrowingExceptionFromFinally:
+    active: true
+  ThrowingExceptionInMain:
+    active: true
+  ThrowingExceptionsWithoutMessageOrCause:
+    active: true
+  ThrowingNewInstanceOfSameException:
+    active: true
+
+formatting:
+  active: true
+  android: false
+  autoCorrect: true
+  BinaryExpressionWrapping:
+    active: true
+  ContextReceiverMapping:
+    active: true
+  Filename:
+    active: false
+  MaximumLineLength:
+    active: false
+  ParameterListSpacing:
+    active: true
+  StatementWrapping:
+    active: true
+  TypeParameterListSpacing:
+    active: true
+
+naming:
+  ClassNaming:
+    ignoreAnnotated: [ 'org.junit.jupiter.api.Nested' ]
+  FunctionNaming:
+    active: true
+    excludes: [ ]
+    ignoreAnnotated: [ 'Test', 'ParameterizedTest', 'RepeatedTest', 'TestFactory', 'Composable' ]
+  TopLevelPropertyNaming:
+    constantPattern: '[a-z][_A-Za-z0-9]*|[A-Z][_A-Z0-9]*'
+  InvalidPackageDeclaration:
+    active: true
+    excludes: [ '**/build-logic/**/*.kt', '**/*.kts' ]
+  NoNameShadowing:
+    active: true
+  NonBooleanPropertyPrefixedWithIs:
+    active: true
+  VariableMaxLength:
+    active: true
+  VariableMinLength:
+    active: true
+
+performance:
+  SpreadOperator:
+    excludes: [ '**/test/**', '**/functionalTest/**' ]
+
+potential-bugs:
+  AvoidReferentialEquality:
+    active: true
+  DontDowncastCollectionTypes:
+    active: true
+  ElseCaseInsteadOfExhaustiveWhen:
+    active: true
+  ExitOutsideMain:
+    active: false
+  HasPlatformType:
+    active: true
+  IgnoredReturnValue:
+    active: true
+  ImplicitUnitReturnType:
+    active: true
+  MapGetWithNotNullAssertionOperator:
+    active: true
+  UnconditionalJumpStatementInLoop:
+    active: true
+  UnreachableCatchBlock:
+    active: true
+  UnsafeCast:
+    active: true
+    excludes: [ '**/test/**', '**/*.Test.kt', '**/*.Spec.kt' ]
+  UselessPostfixExpression:
+    active: true
+
+compose:
+  ReusedModifierInstance:
+    active: true
+  UnnecessaryEventHandlerParameter:
+    active: true
+  ComposableEventParameterNaming:
+    active: true
+  ComposableParametersOrdering:
+    active: true
+  ModifierHeightWithText:
+    active: true
+  ModifierParameterPosition:
+    active: true
+  ModifierDefaultValue:
+    active: true
+  MissingModifierDefaultValue:
+    active: true
+  PublicComposablePreview:
+    active: true
+  TopLevelComposableFunctions:
+    active: true
+  ComposableFunctionName:
+    active: true
+  ConditionCouldBeLifted:
+    active: true
+    ignoreCallsWithArgumentNames: [ 'modifier', 'contentAlignment' ]

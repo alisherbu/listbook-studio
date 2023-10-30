@@ -1,0 +1,138 @@
+[versions]
+#android
+accompanistSystemuicontroller = "0.30.1"
+dagger = "2.48.1"
+minSdk = "24"
+compileSdk = "33"
+targetSdk = "33"
+versionCode = "1"
+versionName = "1.0"
+
+#libraries
+kotlin = "1.9.10"
+androidGradlePlugin = "8.1.0"
+mvikotlin = "3.2.1"
+decompose = "2.0.0"
+androidXCoreKtx = "1.8.0"
+androidxLifecycleRuntimeKtx = "2.3.1"
+googleServices = "4.3.15"
+kspVersion = "1.9.10-1.0.13"
+
+#androidx.compose
+composeBom = "2023.10.01"
+composeActivity = "1.5.1"
+composeConstraintLayout = "1.0.1"
+composeCoil = "2.4.0"
+
+
+#firebase
+firebaseAuth = "22.0.0"
+firebaseCore = "21.1.1"
+firebaseFirestore = "24.9.0"
+
+#other
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+timber = "5.0.1"
+coroutines = "1.7.3"
+
+#media
+exoplayer = "1.1.1"
+
+#static analyzers
+detekt = "1.23.1"
+detektCompose = "1.3.0"
+
+#cache
+room = "2.6.0"
+
+[libraries]
+
+#mvikotlin
+arkivanov-mvikotlin-mvikotlin = { module = "com.arkivanov.mvikotlin:mvikotlin", version.ref = "mvikotlin" }
+arkivanov-mvikotlin-main = { module = "com.arkivanov.mvikotlin:mvikotlin-main", version.ref = "mvikotlin" }
+arkivanov-mvikotlin-coroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlin" }
+arkivanov-mvikotlin-logging = { module = "com.arkivanov.mvikotlin:mvikotlin-logging", version.ref = "mvikotlin" }
+
+#decompose
+arkivanov-decompose-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+arkivanov-decompose-extensionsComposeJetpack = { module = "com.arkivanov.decompose:extensions-compose-jetpack", version.ref = "decompose" }
+
+#jetpackcompose
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
+androidx-compose-material = { module = "androidx.compose.material:material" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-toolingPreview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-constraintLayout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "composeConstraintLayout" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }
+compose-coil = { module = "io.coil-kt:coil-compose", version.ref = "composeCoil" }
+
+#firebase
+dagger-dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+google-firebase-auth = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuth" }
+google-firebase-core = { module = "com.google.firebase:firebase-core", version.ref = "firebaseCore" }
+google-firebase-firestore = { module = "com.google.firebase:firebase-firestore-ktx", version.ref = "firebaseFirestore" }
+
+#media
+exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "exoplayer" }
+
+#static analyzers
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+detekt-compose = { module = "ru.kode:detekt-rules-compose", version.ref = "detektCompose" }
+detekt-ruleauthors = { module = "io.gitlab.arturbosch.detekt:detekt-rules-ruleauthors", version.ref = "detekt" }
+
+#libraries
+androidx-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidXCoreKtx" }
+androidx-lifecycle-runtimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycleRuntimeKtx" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+
+#cache
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+google-ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+
+#static analyzers
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+
+# Plugins defined by this project
+listbook-android-application = { id = "listbook.android.application", version = "unspecified" }
+listbook-android-application-compose = { id = "listbook.android.application.compose", version = "unspecified" }
+listbook-android-library = { id = "listbook.android.library", version = "unspecified" }
+listbook-android-library-compose = { id = "listbook.android.library.compose", version = "unspecified" }
+listbook-android-dagger = { id = "listbook.android.dagger", version = "unspecified" }
+listbook-android-feature = { id = "listbook.android.feature", version = "unspecified" }
+
+[bundles]
+arkivanov-mvikotlin = [
+    "arkivanov-mvikotlin-mvikotlin",
+    "arkivanov-mvikotlin-coroutines",
+]
