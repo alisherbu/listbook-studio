@@ -29,18 +29,12 @@ fun RootScreen(component: RootComponent) {
     ) {
         when (val child = it.instance) {
             ChildScreen.Undefined -> ProgressIndicator()
-            else -> {
-                Text(text = "Not implemented yet")
-            }
         }
     }
 
     val dialogSlot by component.dialogSlot.subscribeAsState()
     dialogSlot.child?.instance?.also { childDialog ->
-        when (childDialog) {
-            is ChildDialog.Message -> {
-            }
-        }
+
     }
 }
 

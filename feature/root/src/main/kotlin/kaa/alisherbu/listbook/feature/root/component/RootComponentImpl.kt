@@ -68,38 +68,15 @@ class RootComponentImpl @AssistedInject internal constructor(
     )
 
     private fun handleLabel(label: Label) {
-        when (label) {
-            Label.UserAlreadySigned -> screenNavigation.replaceCurrent(ScreenConfig.Main)
-            Label.UserNotSigned -> screenNavigation.replaceCurrent(ScreenConfig.Auth)
-        }
+
     }
 
     private fun createChildScreen(
         config: ScreenConfig,
         componentContext: ComponentContext,
     ): ChildScreen = when (config) {
-        ScreenConfig.Auth -> {
-            error("")
-        }
-
-        ScreenConfig.Main -> {
-            error("")
-        }
-
-        ScreenConfig.Signup -> {
-            error("")
-        }
-
-        ScreenConfig.SignIn -> {
-            error("")
-        }
-
-        is ScreenConfig.Player -> {
-            error("")
-        }
-
         ScreenConfig.Undefined -> {
-            error("")
+            ChildScreen.Undefined
         }
     }
 
@@ -108,30 +85,15 @@ class RootComponentImpl @AssistedInject internal constructor(
         componentContext: ComponentContext,
     ): ChildDialog = when (config) {
         is DialogConfig.Message -> {
-            ChildDialog.Message(
-                error(""),
-            )
+            error("")
         }
     }
 
     private sealed interface ScreenConfig : Parcelable {
-        @Parcelize
-        data object Auth : ScreenConfig
-
-        @Parcelize
-        data object Main : ScreenConfig
-
-        @Parcelize
-        data object Signup : ScreenConfig
-
-        @Parcelize
-        data object SignIn : ScreenConfig
 
         @Parcelize
         data object Undefined : ScreenConfig
 
-        @Parcelize
-        class Player(val audioBook: AudioBook) : ScreenConfig
     }
 
     private sealed interface DialogConfig : Parcelable {

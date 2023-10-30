@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "298618723794",
+    "project_id": "audio-book-list",
+    "storage_bucket": "audio-book-list.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298618723794:android:f33c3fa1fdcea25e427c0b",
+        "android_client_info": {
+          "package_name": "kaa.alisherbu.listbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298618723794-rra7n4k8vlnsm5hhdobkbdg9cs5gp897.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHn1GSRXfEzJid-27jKBbqZBXWdD4N5wo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298618723794-rra7n4k8vlnsm5hhdobkbdg9cs5gp897.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298618723794:android:ed45ae604b8713c3427c0b",
+        "android_client_info": {
+          "package_name": "kaa.alisherbu.listbookstudio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298618723794-rra7n4k8vlnsm5hhdobkbdg9cs5gp897.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHn1GSRXfEzJid-27jKBbqZBXWdD4N5wo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298618723794-rra7n4k8vlnsm5hhdobkbdg9cs5gp897.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
