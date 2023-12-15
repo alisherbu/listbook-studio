@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>EmptyFunctionBlock:RootComponentImpl.kt$RootComponentImpl${ }</ID>
+    <ID>NoBlankLineBeforeRbrace:RootComponentImpl.kt$RootComponentImpl$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:RootComponentImpl.kt$RootComponentImpl$ </ID>
+    <ID>UnusedParameter:RootComponentImpl.kt$RootComponentImpl$componentContext: ComponentContext</ID>
+    <ID>UnusedParameter:RootComponentImpl.kt$RootComponentImpl$label: Label</ID>
+  </CurrentIssues>
+</SmellBaseline>

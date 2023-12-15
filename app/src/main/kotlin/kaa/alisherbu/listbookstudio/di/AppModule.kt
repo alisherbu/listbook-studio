@@ -1,4 +1,4 @@
-package kaa.alisherbu.listbook.di
+package kaa.alisherbu.listbookstudio.di
 
 import com.arkivanov.mvikotlin.core.store.StoreFactory
 import com.arkivanov.mvikotlin.logging.logger.DefaultLogFormatter

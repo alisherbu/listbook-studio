@@ -7,7 +7,6 @@ import com.arkivanov.decompose.router.slot.childSlot
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.childStack
-import com.arkivanov.decompose.router.stack.replaceCurrent
 import com.arkivanov.decompose.value.Value
 import com.arkivanov.essenty.lifecycle.doOnDestroy
 import com.arkivanov.essenty.parcelable.Parcelable
@@ -17,7 +16,6 @@ import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kaa.alisherbu.listbook.core.shared.coroutine.AppDispatchers
-import kaa.alisherbu.listbook.core.shared.model.AudioBook
 import kaa.alisherbu.listbook.feature.root.component.RootComponent.ChildDialog
 import kaa.alisherbu.listbook.feature.root.component.RootComponent.ChildScreen
 import kaa.alisherbu.listbook.feature.root.store.Label
@@ -68,7 +66,6 @@ class RootComponentImpl @AssistedInject internal constructor(
     )
 
     private fun handleLabel(label: Label) {
-
     }
 
     private fun createChildScreen(
@@ -93,7 +90,6 @@ class RootComponentImpl @AssistedInject internal constructor(
 
         @Parcelize
         data object Undefined : ScreenConfig
-
     }
 
     private sealed interface DialogConfig : Parcelable {

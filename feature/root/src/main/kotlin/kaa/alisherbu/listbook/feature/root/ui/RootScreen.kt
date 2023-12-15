@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -18,7 +17,6 @@ import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.scale
 import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.stackAnimation
 import com.arkivanov.decompose.extensions.compose.jetpack.subscribeAsState
 import kaa.alisherbu.listbook.feature.root.component.RootComponent
-import kaa.alisherbu.listbook.feature.root.component.RootComponent.ChildDialog
 import kaa.alisherbu.listbook.feature.root.component.RootComponent.ChildScreen
 
 @Composable
@@ -34,7 +32,6 @@ fun RootScreen(component: RootComponent) {
 
     val dialogSlot by component.dialogSlot.subscribeAsState()
     dialogSlot.child?.instance?.also { childDialog ->
-
     }
 }
 

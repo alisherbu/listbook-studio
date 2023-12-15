@@ -43,7 +43,6 @@ internal fun Project.configureKotlinAndroid(
     }
 
     configureKotlin()
-
 }
 
 /**
