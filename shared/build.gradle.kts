@@ -24,4 +24,5 @@ kotlin {
 
 android {
     namespace = "kaa.alisherbu.listbook.shared"
+    compileSdk = 34
 }
