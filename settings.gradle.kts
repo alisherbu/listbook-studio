@@ -19,5 +19,3 @@ dependencyResolutionManagement {
 rootProject.name = "listbook-studio"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
-include(":core:shared")
-include(":feature:root")
