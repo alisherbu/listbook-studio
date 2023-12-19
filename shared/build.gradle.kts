@@ -15,10 +15,12 @@ kotlin {
             }
         }
     }
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
-
+    listOf(iosX64(), iosArm64(), iosSimulatorArm64()).forEach {
+        it.binaries.framework {
+            baseName = "shared" // Used in app-ios-swift
+            export(libs.arkivanov.decompose.decompose)
+        }
+    }
     sourceSets {
         val commonMain by getting {
             dependencies {

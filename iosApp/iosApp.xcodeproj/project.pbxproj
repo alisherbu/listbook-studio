@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		743BE3EA2B3201CE002FC95A /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE3E92B3201CE002FC95A /* iOSApp.swift */; };
-		743BE3EC2B3201CE002FC95A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE3EB2B3201CE002FC95A /* ContentView.swift */; };
-		743BE3EE2B3201D2002FC95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE3ED2B3201D2002FC95A /* Assets.xcassets */; };
-		743BE3F12B3201D2002FC95A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE3F02B3201D2002FC95A /* Preview Assets.xcassets */; };
+		743BE4042B321A45002FC95A /* iosAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE4032B321A45002FC95A /* iosAppApp.swift */; };
+		743BE4062B321A45002FC95A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE4052B321A45002FC95A /* ContentView.swift */; };
+		743BE4082B321A46002FC95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE4072B321A46002FC95A /* Assets.xcassets */; };
+		743BE40B2B321A46002FC95A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE40A2B321A46002FC95A /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		743BE3E62B3201CE002FC95A /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		743BE3E92B3201CE002FC95A /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
-		743BE3EB2B3201CE002FC95A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		743BE3ED2B3201D2002FC95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		743BE3F02B3201D2002FC95A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		743BE4002B321A45002FC95A /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		743BE4032B321A45002FC95A /* iosAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosAppApp.swift; sourceTree = "<group>"; };
+		743BE4052B321A45002FC95A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		743BE4072B321A46002FC95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		743BE40A2B321A46002FC95A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		743BE3E32B3201CE002FC95A /* Frameworks */ = {
+		743BE3FD2B321A45002FC95A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		743BE3DD2B3201CE002FC95A = {
+		743BE3F72B321A45002FC95A = {
 			isa = PBXGroup;
 			children = (
-				743BE3E82B3201CE002FC95A /* iosApp */,
-				743BE3E72B3201CE002FC95A /* Products */,
+				743BE4022B321A45002FC95A /* iosApp */,
+				743BE4012B321A45002FC95A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		743BE3E72B3201CE002FC95A /* Products */ = {
+		743BE4012B321A45002FC95A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				743BE3E62B3201CE002FC95A /* iosApp.app */,
+				743BE4002B321A45002FC95A /* iosApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		743BE3E82B3201CE002FC95A /* iosApp */ = {
+		743BE4022B321A45002FC95A /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				743BE3E92B3201CE002FC95A /* iOSApp.swift */,
-				743BE3EB2B3201CE002FC95A /* ContentView.swift */,
-				743BE3ED2B3201D2002FC95A /* Assets.xcassets */,
-				743BE3EF2B3201D2002FC95A /* Preview Content */,
+				743BE4032B321A45002FC95A /* iosAppApp.swift */,
+				743BE4052B321A45002FC95A /* ContentView.swift */,
+				743BE4072B321A46002FC95A /* Assets.xcassets */,
+				743BE4092B321A46002FC95A /* Preview Content */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
 		};
-		743BE3EF2B3201D2002FC95A /* Preview Content */ = {
+		743BE4092B321A46002FC95A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				743BE3F02B3201D2002FC95A /* Preview Assets.xcassets */,
+				743BE40A2B321A46002FC95A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		743BE3E52B3201CE002FC95A /* iosApp */ = {
+		743BE3FF2B321A45002FC95A /* iosApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 743BE3F42B3201D2002FC95A /* Build configuration list for PBXNativeTarget "iosApp" */;
+			buildConfigurationList = 743BE40E2B321A46002FC95A /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
-				743BE3E22B3201CE002FC95A /* Sources */,
-				743BE3E32B3201CE002FC95A /* Frameworks */,
-				743BE3E42B3201CE002FC95A /* Resources */,
+				743BE3FC2B321A45002FC95A /* Sources */,
+				743BE3FD2B321A45002FC95A /* Frameworks */,
+				743BE3FE2B321A45002FC95A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +84,25 @@
 			);
 			name = iosApp;
 			productName = iosApp;
-			productReference = 743BE3E62B3201CE002FC95A /* iosApp.app */;
+			productReference = 743BE4002B321A45002FC95A /* iosApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		743BE3DE2B3201CE002FC95A /* Project object */ = {
+		743BE3F82B321A45002FC95A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					743BE3E52B3201CE002FC95A = {
+					743BE3FF2B321A45002FC95A = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 743BE3E12B3201CE002FC95A /* Build configuration list for PBXProject "iosApp" */;
+			buildConfigurationList = 743BE3FB2B321A45002FC95A /* Build configuration list for PBXProject "iosApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 743BE3DD2B3201CE002FC95A;
-			productRefGroup = 743BE3E72B3201CE002FC95A /* Products */;
+			mainGroup = 743BE3F72B321A45002FC95A;
+			productRefGroup = 743BE4012B321A45002FC95A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				743BE3E52B3201CE002FC95A /* iosApp */,
+				743BE3FF2B321A45002FC95A /* iosApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		743BE3E42B3201CE002FC95A /* Resources */ = {
+		743BE3FE2B321A45002FC95A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				743BE3F12B3201D2002FC95A /* Preview Assets.xcassets in Resources */,
-				743BE3EE2B3201D2002FC95A /* Assets.xcassets in Resources */,
+				743BE40B2B321A46002FC95A /* Preview Assets.xcassets in Resources */,
+				743BE4082B321A46002FC95A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		743BE3E22B3201CE002FC95A /* Sources */ = {
+		743BE3FC2B321A45002FC95A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				743BE3EC2B3201CE002FC95A /* ContentView.swift in Sources */,
-				743BE3EA2B3201CE002FC95A /* iOSApp.swift in Sources */,
+				743BE4062B321A45002FC95A /* ContentView.swift in Sources */,
+				743BE4042B321A45002FC95A /* iosAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		743BE3F22B3201D2002FC95A /* Debug */ = {
+		743BE40C2B321A46002FC95A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		743BE3F32B3201D2002FC95A /* Release */ = {
+		743BE40D2B321A46002FC95A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,7 +259,7 @@
 			};
 			name = Release;
 		};
-		743BE3F52B3201D2002FC95A /* Debug */ = {
+		743BE40F2B321A46002FC95A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -287,7 +287,7 @@
 			};
 			name = Debug;
 		};
-		743BE3F62B3201D2002FC95A /* Release */ = {
+		743BE4102B321A46002FC95A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -318,25 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		743BE3E12B3201CE002FC95A /* Build configuration list for PBXProject "iosApp" */ = {
+		743BE3FB2B321A45002FC95A /* Build configuration list for PBXProject "iosApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				743BE3F22B3201D2002FC95A /* Debug */,
-				743BE3F32B3201D2002FC95A /* Release */,
+				743BE40C2B321A46002FC95A /* Debug */,
+				743BE40D2B321A46002FC95A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		743BE3F42B3201D2002FC95A /* Build configuration list for PBXNativeTarget "iosApp" */ = {
+		743BE40E2B321A46002FC95A /* Build configuration list for PBXNativeTarget "iosApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				743BE3F52B3201D2002FC95A /* Debug */,
-				743BE3F62B3201D2002FC95A /* Release */,
+				743BE40F2B321A46002FC95A /* Debug */,
+				743BE4102B321A46002FC95A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 743BE3DE2B3201CE002FC95A /* Project object */;
+	rootObject = 743BE3F82B321A45002FC95A /* Project object */;
 }
