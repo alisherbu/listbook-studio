@@ -16,10 +16,14 @@ struct AuthView :View{
     
     var body: some View{
         VStack(){
-            Button(action: {}){
+            Button(action: {
+                authComponent.onSignupClicked()
+            }){
                 Text("Create account")
             }
-            Button(action: {}){
+            Button(action: {
+                authComponent.onSignInClicked()
+            }){
                 Text("Sign in")
             }
         }

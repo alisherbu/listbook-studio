@@ -13,7 +13,17 @@ struct RootView : View {
     init(_ rootComponent: RootComponent) {
         self.rootComponent = rootComponent
     }
-    var body: some View{
-        Text(verbatim: "Hello KMP")
+    var body: some View {
+        StackView(
+            stackValue: StateValue(rootComponent.screenStack),
+            onBack:rootComponent.onBackClicked,
+            childContent: {
+                switch $0 {
+                case let child as RootComponentChildScreenMain: MainView(child.component)
+                case let child as RootComponentChildScreenAuth: AuthView(child.component)
+                default: EmptyView()
+                }
+            }
+        )
     }
 }

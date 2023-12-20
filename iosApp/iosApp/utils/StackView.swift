@@ -7,7 +7,6 @@ struct StackView<T: AnyObject, Content: View>: View {
     @StateValue
     var stackValue: ChildStack<AnyObject, T>
 
-    var getTitle: (T) -> String
     var onBack: (_ toIndex: Int32) -> Void
     
     @ViewBuilder
@@ -29,14 +28,11 @@ struct StackView<T: AnyObject, Content: View>: View {
                 childContent(firstChildInstance)
                     .navigationDestination(for: Child<AnyObject, T>.self) {
                         childContent($0.instance!)
-                            .navigationTitle(getTitle(firstChildInstance))
                     }
-                    .navigationTitle(getTitle(firstChildInstance))
             }
         } else {
             StackInteropView(
                 components: stack.map { $0.instance! },
-                getTitle: getTitle,
                 onBack: onBack,
                 childContent: childContent
             )
@@ -46,7 +42,6 @@ struct StackView<T: AnyObject, Content: View>: View {
 
 private struct StackInteropView<T: AnyObject, Content: View>: UIViewControllerRepresentable {
     var components: [T]
-    var getTitle: (T) -> String
     var onBack: (_ toIndex: Int32) -> Void
     var childContent: (T) -> Content
     
@@ -72,7 +67,6 @@ private struct StackInteropView<T: AnyObject, Content: View>: UIViewControllerRe
         controller.coordinator = coordinator
         controller.component = component
         controller.onBack = onBack
-        controller.navigationItem.title = getTitle(component)
         return controller
     }
     

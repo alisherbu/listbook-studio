@@ -7,6 +7,7 @@ import kaa.alisherbu.listbookstudio.shared.main.MainComponent
 
 interface RootComponent {
     val screenStack: Value<ChildStack<*, ChildScreen>>
+    fun onBackClicked(toIndex: Int)
 
     sealed interface ChildScreen {
         class Auth(val component: AuthComponent) : ChildScreen
