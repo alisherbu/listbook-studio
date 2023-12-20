@@ -3,9 +3,18 @@ import shared
 
 @main
 struct iOSApp: App {
-    var body: some Scene {
+    @UIApplicationDelegateAdaptor(AppDelegate.self)
+        var appDelegate:AppDelegate
+    
+        var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(appDelegate.rootComponent)
         }
     }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    let rootComponent: RootComponent = RootComponentImpl(
+        componentContext: DefaultComponentContext(lifecycle: ApplicationLifecycle())
+    )
 }
