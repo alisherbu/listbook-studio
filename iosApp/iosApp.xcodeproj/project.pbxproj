@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		743BE4042B321A45002FC95A /* iosAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE4032B321A45002FC95A /* iosAppApp.swift */; };
+		743BE4042B321A45002FC95A /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE4032B321A45002FC95A /* iOSApp.swift */; };
 		743BE4062B321A45002FC95A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743BE4052B321A45002FC95A /* ContentView.swift */; };
 		743BE4082B321A46002FC95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE4072B321A46002FC95A /* Assets.xcassets */; };
 		743BE40B2B321A46002FC95A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE40A2B321A46002FC95A /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		743BE4002B321A45002FC95A /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		743BE4032B321A45002FC95A /* iosAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosAppApp.swift; sourceTree = "<group>"; };
+		743BE4032B321A45002FC95A /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		743BE4052B321A45002FC95A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		743BE4072B321A46002FC95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		743BE40A2B321A46002FC95A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		743BE4022B321A45002FC95A /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				743BE4032B321A45002FC95A /* iosAppApp.swift */,
+				743BE4032B321A45002FC95A /* iOSApp.swift */,
 				743BE4052B321A45002FC95A /* ContentView.swift */,
 				743BE4072B321A46002FC95A /* Assets.xcassets */,
 				743BE4092B321A46002FC95A /* Preview Content */,
@@ -74,6 +74,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 743BE40E2B321A46002FC95A /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
+				74EC86B32B3331AF00011FA2 /* ShellScript */,
 				743BE3FC2B321A45002FC95A /* Sources */,
 				743BE3FD2B321A45002FC95A /* Frameworks */,
 				743BE3FE2B321A45002FC95A /* Resources */,
@@ -132,13 +133,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74EC86B32B3331AF00011FA2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		743BE3FC2B321A45002FC95A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				743BE4062B321A45002FC95A /* ContentView.swift in Sources */,
-				743BE4042B321A45002FC95A /* iosAppApp.swift in Sources */,
+				743BE4042B321A45002FC95A /* iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +289,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -279,6 +301,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					shared,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kaa.alisherbu.listbookstudio.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -296,6 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -307,6 +335,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					shared,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kaa.alisherbu.listbookstudio.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

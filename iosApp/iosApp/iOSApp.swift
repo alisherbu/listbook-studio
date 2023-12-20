@@ -1,14 +1,8 @@
-//
-//  iosAppApp.swift
-//  iosApp
-//
-//  Created by Alisher on 19/12/23.
-//
-
 import SwiftUI
+import shared
 
 @main
-struct iosAppApp: App {
+struct iOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
