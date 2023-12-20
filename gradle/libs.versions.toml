@@ -13,6 +13,7 @@ kotlin = "1.9.10"
 androidGradlePlugin = "8.1.4"
 mvikotlin = "3.2.1"
 decompose = "2.0.0"
+essenty = "1.2.0"
 androidXCoreKtx = "1.8.0"
 androidxLifecycleRuntimeKtx = "2.3.1"
 googleServices = "4.3.15"
@@ -60,6 +61,9 @@ arkivanov-mvikotlin-logging = { module = "com.arkivanov.mvikotlin:mvikotlin-logg
 #decompose
 arkivanov-decompose-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 arkivanov-decompose-extensionsComposeJetpack = { module = "com.arkivanov.decompose:extensions-compose-jetpack", version.ref = "decompose" }
+
+#essenty
+arkivanov-essenty-lifecycle = { group = "com.arkivanov.essenty", name = "lifecycle", version.ref = "essenty" }
 
 #jetpackcompose
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }

@@ -19,12 +19,14 @@ kotlin {
         it.binaries.framework {
             baseName = "shared" // Used in app-ios-swift
             export(libs.arkivanov.decompose.decompose)
+            export(libs.arkivanov.essenty.lifecycle)
         }
     }
     sourceSets {
         val commonMain by getting {
             dependencies {
                 api(libs.arkivanov.decompose.decompose)
+                api(libs.arkivanov.essenty.lifecycle)
             }
         }
     }
