@@ -12,6 +12,8 @@
 		743BE4082B321A46002FC95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE4072B321A46002FC95A /* Assets.xcassets */; };
 		743BE40B2B321A46002FC95A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743BE40A2B321A46002FC95A /* Preview Assets.xcassets */; };
 		74EC86B72B333A3200011FA2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC86B62B333A3200011FA2 /* RootView.swift */; };
+		74EC86BA2B333F5400011FA2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC86B92B333F5400011FA2 /* MainView.swift */; };
+		74EC86BE2B333F7900011FA2 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC86BD2B333F7900011FA2 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		743BE4072B321A46002FC95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		743BE40A2B321A46002FC95A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74EC86B62B333A3200011FA2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		74EC86B92B333F5400011FA2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		74EC86BD2B333F7900011FA2 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,9 @@
 		743BE4022B321A45002FC95A /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				74EC86BF2B33425B00011FA2 /* utils */,
+				74EC86BB2B333F5B00011FA2 /* auth */,
+				74EC86B82B333F4000011FA2 /* main */,
 				74EC86B52B333A1D00011FA2 /* root */,
 				743BE4032B321A45002FC95A /* iOSApp.swift */,
 				743BE4052B321A45002FC95A /* ContentView.swift */,
@@ -76,6 +83,29 @@
 				74EC86B62B333A3200011FA2 /* RootView.swift */,
 			);
 			path = root;
+			sourceTree = "<group>";
+		};
+		74EC86B82B333F4000011FA2 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				74EC86B92B333F5400011FA2 /* MainView.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		74EC86BB2B333F5B00011FA2 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				74EC86BD2B333F7900011FA2 /* AuthView.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		74EC86BF2B33425B00011FA2 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				743BE4062B321A45002FC95A /* ContentView.swift in Sources */,
+				74EC86BE2B333F7900011FA2 /* AuthView.swift in Sources */,
+				74EC86BA2B333F5400011FA2 /* MainView.swift in Sources */,
 				743BE4042B321A45002FC95A /* iOSApp.swift in Sources */,
 				74EC86B72B333A3200011FA2 /* RootView.swift in Sources */,
 			);
