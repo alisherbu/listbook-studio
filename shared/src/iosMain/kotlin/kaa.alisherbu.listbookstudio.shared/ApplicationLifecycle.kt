@@ -44,7 +44,10 @@ class ApplicationLifecycle private constructor(
             name = UIApplicationDidEnterBackgroundNotification,
             selectorName = "didEnterBackground"
         )
-        addObserver(name = UIApplicationWillTerminateNotification, selectorName = "willTerminate")
+        addObserver(
+            name = UIApplicationWillTerminateNotification,
+            selectorName = "willTerminate"
+        )
     }
 
     private fun addObserver(name: NSNotificationName, selectorName: String) {
