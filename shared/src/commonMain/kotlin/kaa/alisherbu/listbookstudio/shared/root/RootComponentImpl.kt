@@ -25,6 +25,7 @@ import kaa.alisherbu.listbookstudio.shared.auth.AuthComponentImpl
 import kaa.alisherbu.listbookstudio.shared.di.AppContainer
 import kaa.alisherbu.listbookstudio.shared.di.StoreContainer
 import kaa.alisherbu.listbookstudio.shared.dialog.MessageDialogComponentImpl
+import kaa.alisherbu.listbookstudio.shared.main.MainComponent
 import kaa.alisherbu.listbookstudio.shared.main.MainComponentImpl
 import kaa.alisherbu.listbookstudio.shared.root.RootComponent.ChildScreen
 import kaa.alisherbu.listbookstudio.shared.signin.SignInComponent
@@ -94,7 +95,7 @@ class RootComponentImpl(
         }
 
         ScreenConfig.Main -> {
-            ChildScreen.Main(MainComponentImpl(componentContext))
+            ChildScreen.Main(MainComponentImpl(componentContext,::onMainOutput))
         }
 
         ScreenConfig.SignIn -> {
@@ -165,6 +166,11 @@ class RootComponentImpl(
         }
     }
 
+    private fun onMainOutput(output: MainComponent.Output): Unit = when (output) {
+
+        else -> {}
+    }
+
     private sealed interface ScreenConfig : Parcelable {
         @Parcelize
         data object Auth : ScreenConfig
@@ -190,6 +196,6 @@ class RootComponentImpl(
     }
 
     companion object {
-        private val INIT_DELAY = 1.milliseconds
+        private val INIT_DELAY = 5.milliseconds
     }
 }

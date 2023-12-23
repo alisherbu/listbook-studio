@@ -4,6 +4,10 @@ import com.arkivanov.mvikotlin.logging.store.LoggingStoreFactory
 import com.arkivanov.mvikotlin.main.store.DefaultStoreFactory
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.auth
+import kaa.alisherbu.listbookstudio.shared.main.store.MainExecutor
+import kaa.alisherbu.listbookstudio.shared.main.store.MainReducer
+import kaa.alisherbu.listbookstudio.shared.main.store.MainStore
+import kaa.alisherbu.listbookstudio.shared.main.store.MainStoreImpl
 import kaa.alisherbu.listbookstudio.shared.root.store.RootExecutor
 import kaa.alisherbu.listbookstudio.shared.root.store.RootStore
 import kaa.alisherbu.listbookstudio.shared.root.store.RootStoreImpl
@@ -41,6 +45,14 @@ internal object StoreContainer {
         return RootStoreImpl(
             storeFactory = storeFactory,
             executorFactory = { RootExecutor(firebaseAuth) },
+        )
+    }
+
+    fun getMainStore(): MainStore {
+        return MainStoreImpl(
+            storeFactory = storeFactory,
+            executorFactory = { MainExecutor() },
+            reducer = MainReducer()
         )
     }
 }
