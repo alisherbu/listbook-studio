@@ -28,7 +28,6 @@ kotlin {
             dependencies {
                 api(libs.arkivanov.decompose.decompose)
                 api(libs.arkivanov.essenty.lifecycle)
-                implementation(libs.firebase.auth)
             }
         }
         val androidMain by getting {
