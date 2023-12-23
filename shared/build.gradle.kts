@@ -19,6 +19,7 @@ kotlin {
     listOf(iosX64(), iosArm64(), iosSimulatorArm64()).forEach {
         it.binaries.framework {
             baseName = "shared" // Used in app-ios-swift
+            isStatic = true
             export(libs.arkivanov.decompose.decompose)
             export(libs.arkivanov.essenty.lifecycle)
         }
@@ -32,6 +33,7 @@ kotlin {
                 implementation(libs.arkivanov.mvikotlin.mvikotlin)
                 implementation(libs.arkivanov.mvikotlin.coroutines)
                 implementation(libs.arkivanov.mvikotlin.rx)
+                implementation(libs.firebase.auth)
             }
         }
         val androidMain by getting {
