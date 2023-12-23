@@ -13,11 +13,17 @@ import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.popTo
 import com.arkivanov.decompose.router.stack.push
 import com.arkivanov.decompose.router.stack.replaceAll
+import com.arkivanov.decompose.router.stack.replaceCurrent
 import com.arkivanov.decompose.value.Value
+import com.arkivanov.essenty.lifecycle.doOnDestroy
 import com.arkivanov.essenty.parcelable.Parcelable
 import com.arkivanov.essenty.parcelable.Parcelize
+import com.arkivanov.mvikotlin.core.instancekeeper.getStore
+import com.arkivanov.mvikotlin.extensions.coroutines.labels
 import kaa.alisherbu.listbookstudio.shared.auth.AuthComponent.Output
 import kaa.alisherbu.listbookstudio.shared.auth.AuthComponentImpl
+import kaa.alisherbu.listbookstudio.shared.di.AppContainer
+import kaa.alisherbu.listbookstudio.shared.di.StoreContainer
 import kaa.alisherbu.listbookstudio.shared.dialog.MessageDialogComponentImpl
 import kaa.alisherbu.listbookstudio.shared.main.MainComponentImpl
 import kaa.alisherbu.listbookstudio.shared.root.RootComponent.ChildScreen
@@ -26,16 +32,38 @@ import kaa.alisherbu.listbookstudio.shared.signin.SignInComponentImpl
 import kaa.alisherbu.listbookstudio.shared.signup.SignupComponent
 import kaa.alisherbu.listbookstudio.shared.signup.SignupComponentImpl
 import kaa.alisherbu.listbookstudio.shared.root.RootComponent.ChildDialog
+import kaa.alisherbu.listbookstudio.shared.root.store.Label
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.milliseconds
 
 class RootComponentImpl(
     componentContext: ComponentContext
 ) : RootComponent, ComponentContext by componentContext {
+    private val dispatchers = AppContainer.getAppDispatchers()
+    private val mainScope = CoroutineScope(dispatchers.main)
     private val screenNavigation = StackNavigation<ScreenConfig>()
     private val dialogNavigation = SlotNavigation<DialogConfig>()
+    private val store = instanceKeeper.getStore(StoreContainer::getRootStore)
+
+    init {
+        store.labels
+            .onEach(::handleLabel)
+            .launchIn(mainScope)
+        mainScope.launch {
+            delay(INIT_DELAY)
+            store.init()
+        }
+        lifecycle.doOnDestroy(mainScope::cancel)
+    }
 
     override val screenStack: Value<ChildStack<*, ChildScreen>> = childStack(
         source = screenNavigation,
-        initialConfiguration = ScreenConfig.Auth,
+        initialConfiguration = ScreenConfig.Undefined,
         handleBackButton = true,
         childFactory = ::createChildScreen
     )
@@ -45,6 +73,13 @@ class RootComponentImpl(
         handleBackButton = true,
         childFactory = ::createChildDialog,
     )
+
+    private fun handleLabel(label: Label) {
+        when (label) {
+            Label.UserAlreadySigned -> screenNavigation.replaceCurrent(ScreenConfig.Main)
+            Label.UserNotSigned -> screenNavigation.replaceCurrent(ScreenConfig.Auth)
+        }
+    }
 
     override fun onBackClicked(toIndex: Int) {
         screenNavigation.popTo(index = toIndex)
@@ -68,6 +103,10 @@ class RootComponentImpl(
 
         ScreenConfig.Signup -> {
             ChildScreen.Signup(SignupComponentImpl(componentContext, ::onSignupOutput))
+        }
+
+        ScreenConfig.Undefined -> {
+            ChildScreen.Undefined
         }
     }
 
@@ -101,9 +140,15 @@ class RootComponentImpl(
             screenNavigation.pop()
         }
 
+        SignupComponent.Output.Main -> {
+            screenNavigation.replaceAll(ScreenConfig.Main)
+        }
+
+
         is SignupComponent.Output.Error -> {
             dialogNavigation.activate(DialogConfig.Message(output.message))
         }
+
     }
 
     private fun onSignInOutput(output: SignInComponent.Output): Unit = when (output) {
@@ -132,6 +177,9 @@ class RootComponentImpl(
 
         @Parcelize
         data object SignIn : ScreenConfig
+
+        @Parcelize
+        data object Undefined : ScreenConfig
     }
 
     private sealed interface DialogConfig : Parcelable {
@@ -139,5 +187,9 @@ class RootComponentImpl(
         class Message(
             val text: String,
         ) : DialogConfig
+    }
+
+    companion object {
+        private val INIT_DELAY = 1.milliseconds
     }
 }

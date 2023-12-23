@@ -20,6 +20,7 @@ interface SignupComponent {
 
     sealed class Output {
         data object Back : Output()
+        data object Main : Output()
         class Error(val message: String) : Output()
     }
 }

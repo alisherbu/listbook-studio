@@ -1,7 +1,6 @@
 package kaa.alisherbu.listbookstudio.shared.signup
 
 import com.arkivanov.decompose.ComponentContext
-import com.arkivanov.decompose.router.slot.activate
 import com.arkivanov.decompose.value.Value
 import com.arkivanov.essenty.lifecycle.doOnDestroy
 import com.arkivanov.mvikotlin.core.instancekeeper.getStore
@@ -37,7 +36,7 @@ class SignupComponentImpl constructor(
     private fun handleLabel(label: Label) {
         when (label) {
             Label.AccountSuccessfullyCreated -> {
-
+                output(Output.Main)
             }
 
             is Label.ErrorOccurred -> {
