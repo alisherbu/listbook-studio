@@ -394,7 +394,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kaa.alisherbu.listbookstudio.iosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = kaa.alisherbu.listbookstudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -428,7 +428,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kaa.alisherbu.listbookstudio.iosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = kaa.alisherbu.listbookstudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
