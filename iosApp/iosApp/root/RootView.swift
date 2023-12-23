@@ -10,10 +10,16 @@ import shared
 
 struct RootView : View {
     let component:RootComponent
+    
+    @StateValue
+    private var dialogSlot: ChildSlot<AnyObject, RootComponentChildDialog>
+    
     init(_ component: RootComponent) {
         self.component = component
+        _dialogSlot = StateValue(component.dialogSlot)
     }
     var body: some View {
+        let isPresent = Binding(get: { dialogSlot.child?.instance != nil }, set: {_ in})
         StackView(
             stackValue: StateValue(component.screenStack),
             onBack:component.onBackClicked,
@@ -26,6 +32,17 @@ struct RootView : View {
                 default: EmptyView()
                 }
             }
+        ).alert(
+            isPresented: isPresent,
+            content: createAlert
         )
     }
+    
+    func createAlert() -> Alert{
+        switch dialogSlot.child?.instance {
+        case let slot as RootComponentChildDialogMessage: return MessageDialog(slot.component)
+        default: return Alert(title: Text("Error"))
+        }
+    }
 }
+

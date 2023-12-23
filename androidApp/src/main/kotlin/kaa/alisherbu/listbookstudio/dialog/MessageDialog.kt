@@ -10,7 +10,7 @@ import androidx.compose.ui.unit.dp
 import kaa.alisherbu.listbookstudio.shared.dialog.MessageDialogComponent
 
 @Composable
-fun MessageDialogScreen(dialogComponent: MessageDialogComponent) {
+fun MessageDialog(dialogComponent: MessageDialogComponent) {
     AlertDialog(
         onDismissRequest = {
             dialogComponent.onDismissClicked()

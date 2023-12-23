@@ -9,7 +9,7 @@ import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.scale
 import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.stackAnimation
 import com.arkivanov.decompose.extensions.compose.jetpack.subscribeAsState
 import kaa.alisherbu.listbookstudio.auth.AuthScreen
-import kaa.alisherbu.listbookstudio.dialog.MessageDialogScreen
+import kaa.alisherbu.listbookstudio.dialog.MessageDialog
 import kaa.alisherbu.listbookstudio.main.MainScreen
 import kaa.alisherbu.listbookstudio.shared.root.RootComponent
 import kaa.alisherbu.listbookstudio.shared.root.RootComponent.ChildDialog
@@ -34,7 +34,7 @@ fun RootScreen(component: RootComponent) {
     dialogSlot.child?.instance?.also { childDialog ->
         when (childDialog) {
             is ChildDialog.Message -> {
-                MessageDialogScreen(childDialog.component)
+                MessageDialog(childDialog.component)
             }
         }
     }
