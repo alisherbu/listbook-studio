@@ -10,8 +10,8 @@ android {
 
     defaultConfig {
         applicationId = "kaa.alisherbu.listbookstudio"
-        versionCode = libs.versions.versionCode.get().toInt()
-        versionName = libs.versions.versionName.get()
+        versionCode = 1
+        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

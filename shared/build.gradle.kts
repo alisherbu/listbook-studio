@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -27,6 +28,7 @@ kotlin {
             dependencies {
                 api(libs.arkivanov.decompose.decompose)
                 api(libs.arkivanov.essenty.lifecycle)
+                implementation(libs.firebase.auth)
             }
         }
         val androidMain by getting {
