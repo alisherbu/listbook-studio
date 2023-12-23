@@ -11,7 +11,7 @@ internal sealed interface Intent {
 
 internal sealed interface Label {
     data object SuccessfullySigned : Label
-    class ErrorOccurred(val message: String) : Label
+    data class ErrorOccurred(val message: String) : Label
 }
 
 internal sealed interface Message {

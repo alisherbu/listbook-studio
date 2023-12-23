@@ -2,6 +2,7 @@ package kaa.alisherbu.listbookstudio.shared.signup.store
 
 import com.arkivanov.mvikotlin.extensions.coroutines.CoroutineExecutor
 import dev.gitlive.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.launch
 
 internal class SignupExecutor(
     private val firebaseAuth: FirebaseAuth
@@ -49,7 +50,9 @@ internal class SignupExecutor(
                 dispatch(Message.SurnameTextChanged(intent.text, isCreateAccountButtonEnabled))
             }
 
-            Intent.CreateAccountClicked -> {}
+            Intent.CreateAccountClicked -> scope.launch {
+                createAccount(state.email, state.password)
+            }
         }
     }
 
@@ -61,5 +64,15 @@ internal class SignupExecutor(
     ): Boolean {
         return name.isNotBlank() && surname.isNotBlank() &&
                 email.isNotBlank() && password.isNotBlank()
+    }
+
+    private suspend fun createAccount(email: String, password: String) {
+        try {
+            val user = firebaseAuth.createUserWithEmailAndPassword(email, password).user
+            if (user != null) publish(Label.AccountSuccessfullyCreated)
+            else publish(Label.ErrorOccurred("Something went wrong"))
+        } catch (e: Exception) {
+            publish(Label.ErrorOccurred(e.message.toString()))
+        }
     }
 }

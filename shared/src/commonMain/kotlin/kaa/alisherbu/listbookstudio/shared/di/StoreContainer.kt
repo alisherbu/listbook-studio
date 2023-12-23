@@ -20,7 +20,7 @@ internal object StoreContainer {
     fun getSignInStore(): SignInStore {
         return SignInStoreImpl(
             storeFactory = storeFactory,
-            executorFactory = { SignInExecutor() },
+            executorFactory = { SignInExecutor(firebaseAuth) },
             reducer = SignInReducer()
         )
     }

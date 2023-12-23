@@ -34,6 +34,7 @@ kotlin {
                 implementation(libs.arkivanov.mvikotlin.logging)
                 implementation(libs.arkivanov.mvikotlin.coroutines)
                 implementation(libs.arkivanov.mvikotlin.rx)
+                implementation(libs.coroutines.core)
                 implementation(libs.firebase.auth)
             }
         }
