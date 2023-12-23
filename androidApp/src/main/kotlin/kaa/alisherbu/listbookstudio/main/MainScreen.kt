@@ -13,7 +13,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import com.arkivanov.decompose.extensions.compose.jetpack.stack.Children
 import com.arkivanov.decompose.extensions.compose.jetpack.subscribeAsState
+import com.arkivanov.decompose.router.stack.ChildStack
+import kaa.alisherbu.listbookstudio.home.HomeScreen
+import kaa.alisherbu.listbookstudio.profile.ProfileScreen
 import kaa.alisherbu.listbookstudio.shared.main.MainComponent
 import kaa.alisherbu.listbookstudio.shared.main.MainComponent.ChildScreen
 
@@ -47,11 +51,18 @@ fun MainScreen(component: MainComponent) {
             )
         }
     }, content = {
-        MainContent(modifier = Modifier.padding(it))
+        MainContent(screenStack = screenStack, modifier = Modifier.padding(it))
     })
 }
 
 @Composable
-private fun MainContent(modifier: Modifier = Modifier) {
-
+private fun MainContent(
+    screenStack: ChildStack<*, ChildScreen>, modifier: Modifier = Modifier
+) {
+    Children(stack = screenStack, modifier = modifier) {
+        when (val child = it.instance) {
+            is ChildScreen.Home -> HomeScreen(child.component)
+            is ChildScreen.Profile -> ProfileScreen(child.component)
+        }
+    }
 }
