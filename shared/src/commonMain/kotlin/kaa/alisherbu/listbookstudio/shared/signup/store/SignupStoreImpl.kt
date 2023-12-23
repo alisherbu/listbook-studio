@@ -5,11 +5,12 @@ import com.arkivanov.mvikotlin.core.store.StoreFactory
 
 internal class SignupStoreImpl constructor(
     storeFactory: StoreFactory,
+    executorFactory: () -> SignupExecutor,
     reducer: SignupReducer,
 ) : SignupStore,
     Store<Intent, SignupState, Label> by storeFactory.create(
         name = SignupStore::class.simpleName,
-        executorFactory = { SignupExecutor() },
+        executorFactory = executorFactory,
         reducer = reducer,
         initialState = SignupState(),
     )
