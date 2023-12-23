@@ -9,9 +9,9 @@ import SwiftUI
 import shared
 
 struct SignupView : View{
-    private let signupComponent:SignupComponent
-    init(_ mainComponent: SignupComponent) {
-        self.signupComponent = mainComponent
+    private let component:SignupComponent
+    init(_ component: SignupComponent) {
+        self.component = component
     }
     
     var body: some View{

@@ -9,20 +9,20 @@ import SwiftUI
 import shared
 
 struct AuthView :View{
-    private let authComponent:AuthComponent
-    init(_ authComponent: AuthComponent) {
-        self.authComponent = authComponent
+    private let component:AuthComponent
+    init(_ component: AuthComponent) {
+        self.component = component
     }
     
     var body: some View{
         VStack(){
             Button(action: {
-                authComponent.onSignupClicked()
+                component.onSignupClicked()
             }){
                 Text("Create account")
             }
             Button(action: {
-                authComponent.onSignInClicked()
+                component.onSignInClicked()
             }){
                 Text("Sign in")
             }

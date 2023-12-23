@@ -9,9 +9,9 @@ import SwiftUI
 import shared
 
 struct MainView : View{
-    private let mainComponent:MainComponent
-    init(_ mainComponent: MainComponent) {
-        self.mainComponent = mainComponent
+    private let component:MainComponent
+    init(_ component: MainComponent) {
+        self.component = component
     }
     
     var body: some View{

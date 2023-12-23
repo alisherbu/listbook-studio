@@ -9,12 +9,19 @@ import SwiftUI
 import shared
 
 struct SignInView : View{
-    private let signInComponent:SignInComponent
-    init(_ mainComponent: SignInComponent) {
-        self.signInComponent = mainComponent
+    private let component:SignInComponent
+    
+    @StateValue
+    private var state:SignInState
+        
+    init(_ component: SignInComponent) {
+        self.component = component
+        _state = StateValue(component.state)
     }
     
     var body: some View{
-        Text("Sign In")
+        let email = Binding(get: { state.email }, set: component.onEmailTextChanged)
+
+        TextEditor(text: email)
     }
 }

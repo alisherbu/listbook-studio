@@ -9,14 +9,14 @@ import SwiftUI
 import shared
 
 struct RootView : View {
-    let rootComponent:RootComponent
-    init(_ rootComponent: RootComponent) {
-        self.rootComponent = rootComponent
+    let component:RootComponent
+    init(_ component: RootComponent) {
+        self.component = component
     }
     var body: some View {
         StackView(
-            stackValue: StateValue(rootComponent.screenStack),
-            onBack:rootComponent.onBackClicked,
+            stackValue: StateValue(component.screenStack),
+            onBack:component.onBackClicked,
             childContent: {
                 switch $0 {
                 case let child as RootComponentChildScreenMain: MainView(child.component)
