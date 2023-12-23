@@ -1,10 +1,10 @@
 package kaa.alisherbu.listbookstudio.shared.signup
 
-import com.arkivanov.decompose.value.MutableValue
+import com.arkivanov.decompose.value.Value
 import kaa.alisherbu.listbookstudio.shared.signup.store.SignupState
 
 interface SignupComponent {
-    val state: MutableValue<SignupState>
+    val state: Value<SignupState>
 
     fun onNameTextChanged(text: String)
 
