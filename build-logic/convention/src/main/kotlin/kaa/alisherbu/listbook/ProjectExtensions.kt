@@ -31,14 +31,6 @@ fun DependencyHandler.implementation(dependencyNotation: Provider<MinimalExterna
     add("implementation", dependencyNotation)
 }
 
-fun DependencyHandler.debugImplementation(dependencyNotation: Provider<MinimalExternalModuleDependency>) {
-    add("debugImplementation", dependencyNotation)
-}
-
-fun DependencyHandler.kapt(dependencyNotation: Provider<MinimalExternalModuleDependency>) {
-    add("kapt", dependencyNotation)
-}
-
 fun Project.library(alias: String): Provider<MinimalExternalModuleDependency> {
     return libs.findLibrary(alias).get()
 }

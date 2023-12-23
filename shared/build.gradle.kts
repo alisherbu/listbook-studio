@@ -29,6 +29,17 @@ kotlin {
                 api(libs.arkivanov.essenty.lifecycle)
             }
         }
+        val androidMain by getting {
+            dependencies {
+
+            }
+        }
+        val iosMain by getting{
+            dependencies {
+
+            }
+        }
+
     }
 }
 
