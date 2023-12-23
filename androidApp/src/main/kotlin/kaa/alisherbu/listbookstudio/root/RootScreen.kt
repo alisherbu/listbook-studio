@@ -10,6 +10,8 @@ import kaa.alisherbu.listbookstudio.auth.AuthScreen
 import kaa.alisherbu.listbookstudio.main.MainScreen
 import kaa.alisherbu.listbookstudio.shared.root.RootComponent
 import kaa.alisherbu.listbookstudio.shared.root.RootComponent.ChildScreen
+import kaa.alisherbu.listbookstudio.signin.SignInScreen
+import kaa.alisherbu.listbookstudio.signup.SignupScreen
 
 @Composable
 fun RootScreen(component: RootComponent) {
@@ -20,6 +22,8 @@ fun RootScreen(component: RootComponent) {
         when (val child = it.instance) {
             is ChildScreen.Auth -> AuthScreen(child.component)
             is ChildScreen.Main -> MainScreen(child.component)
+            is ChildScreen.SignIn -> SignInScreen(child.component)
+            is ChildScreen.Signup -> SignupScreen(child.component)
         }
     }
 }
