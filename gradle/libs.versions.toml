@@ -34,6 +34,7 @@ arkivanov-mvikotlin-mvikotlin = { module = "com.arkivanov.mvikotlin:mvikotlin", 
 arkivanov-mvikotlin-main = { module = "com.arkivanov.mvikotlin:mvikotlin-main", version.ref = "mvikotlin" }
 arkivanov-mvikotlin-coroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlin" }
 arkivanov-mvikotlin-logging = { module = "com.arkivanov.mvikotlin:mvikotlin-logging", version.ref = "mvikotlin" }
+arkivanov-mvikotlin-rx = { module = "com.arkivanov.mvikotlin:rx", version.ref = "mvikotlin" }
 
 #decompose
 arkivanov-decompose-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }

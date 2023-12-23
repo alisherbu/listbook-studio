@@ -28,6 +28,10 @@ kotlin {
             dependencies {
                 api(libs.arkivanov.decompose.decompose)
                 api(libs.arkivanov.essenty.lifecycle)
+                implementation(libs.arkivanov.mvikotlin.main)
+                implementation(libs.arkivanov.mvikotlin.mvikotlin)
+                implementation(libs.arkivanov.mvikotlin.coroutines)
+                implementation(libs.arkivanov.mvikotlin.rx)
             }
         }
         val androidMain by getting {

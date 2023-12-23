@@ -1,11 +1,11 @@
 package kaa.alisherbu.listbookstudio.shared.signin
 
-import com.arkivanov.decompose.value.MutableValue
+import com.arkivanov.decompose.value.Value
 import kaa.alisherbu.listbookstudio.shared.signin.store.SignInState
 
 interface SignInComponent {
 
-    val state: MutableValue<SignInState>
+    val state: Value<SignInState>
 
     fun onBackClicked()
 

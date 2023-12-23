@@ -22,6 +22,6 @@ struct SignInView : View{
     var body: some View{
         let email = Binding(get: { state.email }, set: component.onEmailTextChanged)
 
-        TextEditor(text: email)
+        TextField("Email",text: email)
     }
 }
