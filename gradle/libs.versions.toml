@@ -3,6 +3,7 @@ firebaseApp = "1.10.4"
 firebaseAuth = "1.10.4"
 
 #libraries
+firebaseCommonKtx = "20.4.2"
 kotlin = "1.9.10"
 androidGradlePlugin = "8.1.4"
 mvikotlin = "3.2.1"
@@ -63,6 +64,7 @@ coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", ve
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 firebase-app = { module = "dev.gitlive:firebase-app", version.ref = "firebaseApp" }
 firebase-auth = { module = "dev.gitlive:firebase-auth", version.ref = "firebaseAuth" }
+firebase-common-ktx = { module = "com.google.firebase:firebase-common-ktx", version.ref = "firebaseCommonKtx" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }

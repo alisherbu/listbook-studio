@@ -1,8 +1,11 @@
 package kaa.alisherbu.listbookstudio.shared.signup.store
 
 import com.arkivanov.mvikotlin.extensions.coroutines.CoroutineExecutor
+import dev.gitlive.firebase.auth.FirebaseAuth
 
-internal class SignupExecutor : CoroutineExecutor<Intent, Unit, SignupState, Message, Label>() {
+internal class SignupExecutor(
+    private val firebaseAuth: FirebaseAuth
+) : CoroutineExecutor<Intent, Unit, SignupState, Message, Label>() {
     override fun executeIntent(intent: Intent, getState: () -> SignupState) {
         val state = getState()
         when (intent) {

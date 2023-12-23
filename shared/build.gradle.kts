@@ -22,7 +22,6 @@ kotlin {
             isStatic = true
             export(libs.arkivanov.decompose.decompose)
             export(libs.arkivanov.essenty.lifecycle)
-            export(libs.firebase.app)
         }
     }
     sourceSets {
@@ -32,10 +31,10 @@ kotlin {
                 api(libs.arkivanov.essenty.lifecycle)
                 implementation(libs.arkivanov.mvikotlin.main)
                 implementation(libs.arkivanov.mvikotlin.mvikotlin)
+                implementation(libs.arkivanov.mvikotlin.logging)
                 implementation(libs.arkivanov.mvikotlin.coroutines)
                 implementation(libs.arkivanov.mvikotlin.rx)
                 implementation(libs.firebase.auth)
-                api(libs.firebase.app)
             }
         }
         val androidMain by getting {
@@ -43,7 +42,7 @@ kotlin {
 
             }
         }
-        val iosMain by getting{
+        val iosMain by getting {
             dependencies {
 
             }
@@ -53,11 +52,14 @@ kotlin {
 }
 
 android {
-    namespace = "kaa.alisherbu.listbook.shared"
+    namespace = "kaa.alisherbu.listbookstudio.shared"
     compileSdk = 34
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }

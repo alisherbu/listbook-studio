@@ -1,8 +1,8 @@
 package kaa.alisherbu.listbookstudio
 
 import android.app.Application
-import dev.gitlive.firebase.Firebase
-import dev.gitlive.firebase.initialize
+import com.google.firebase.Firebase
+import com.google.firebase.initialize
 
 class Application : Application() {
     override fun onCreate() {

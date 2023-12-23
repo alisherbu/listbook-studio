@@ -43,4 +43,5 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.arkivanov.decompose.extensionsComposeJetpack)
     implementation(projects.shared)
+    implementation(libs.firebase.common.ktx)
 }
