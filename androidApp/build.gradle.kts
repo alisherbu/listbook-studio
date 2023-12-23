@@ -3,6 +3,7 @@
 plugins {
     alias(libs.plugins.listbook.android.application)
     alias(libs.plugins.listbook.android.application.compose)
+    alias(libs.plugins.google.services)
 }
 
 android {

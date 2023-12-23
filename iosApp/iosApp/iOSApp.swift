@@ -1,11 +1,10 @@
 import SwiftUI
-import Firebase
 import shared
 
 @main
 struct iOSApp: App {
     init(){
-        FirebaseApp.configure()
+        Firebase.initialize()
     }
     @UIApplicationDelegateAdaptor(AppDelegate.self)
     var appDelegate:AppDelegate

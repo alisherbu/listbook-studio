@@ -22,6 +22,7 @@ kotlin {
             isStatic = true
             export(libs.arkivanov.decompose.decompose)
             export(libs.arkivanov.essenty.lifecycle)
+            export(libs.firebase.app)
         }
     }
     sourceSets {
@@ -34,6 +35,7 @@ kotlin {
                 implementation(libs.arkivanov.mvikotlin.coroutines)
                 implementation(libs.arkivanov.mvikotlin.rx)
                 implementation(libs.firebase.auth)
+                api(libs.firebase.app)
             }
         }
         val androidMain by getting {
