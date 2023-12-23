@@ -1,12 +1,16 @@
 import SwiftUI
+import Firebase
 import shared
 
 @main
 struct iOSApp: App {
+    init(){
+        FirebaseApp.configure()
+    }
     @UIApplicationDelegateAdaptor(AppDelegate.self)
-        var appDelegate:AppDelegate
+    var appDelegate:AppDelegate
     
-        var body: some Scene {
+    var body: some Scene {
         WindowGroup {
             RootView(appDelegate.rootComponent)
         }
