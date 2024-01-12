@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -17,7 +18,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "listbook-studio"
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-include(":app")
-include(":core:shared")
-include(":feature:root")
+include(":androidApp")
+include(":shared")
+
