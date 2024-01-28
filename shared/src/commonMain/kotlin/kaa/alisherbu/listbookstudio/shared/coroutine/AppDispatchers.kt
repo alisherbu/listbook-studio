@@ -1,4 +1,4 @@
-package kaa.alisherbu.listbook.core.shared.coroutine
+package kaa.alisherbu.listbookstudio.shared.coroutine
 
 import kotlinx.coroutines.CoroutineDispatcher
 

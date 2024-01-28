@@ -1,6 +1,6 @@
 package kaa.alisherbu.listbookstudio.shared.di
 
-import kaa.alisherbu.listbook.core.shared.coroutine.AppDispatchers
+import kaa.alisherbu.listbookstudio.shared.coroutine.AppDispatchers
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
